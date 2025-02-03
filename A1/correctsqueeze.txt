@@ -1,0 +1,2 @@
+Enter a sequence of letters: a5b3 cd4e3 amal ali a9a4bcd2
+
