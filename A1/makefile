@@ -36,6 +36,7 @@ Testing: testsqueeze testxTable
 testsqueeze:
 	./squeeze < testsqueezeIn.txt > testsqueezeOut.txt 
 	diff testsqueezeOut.txt correctsqueeze.txt
+
 testxTable:
 	./xTable < testxTableIn.txt > testxTableOut.txt
 	diff testxTableOut.txt correctxTable.txt 
