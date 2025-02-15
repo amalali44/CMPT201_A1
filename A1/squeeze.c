@@ -4,7 +4,7 @@ Assignment #1
 Lab Section: X06L
 Lab Instructor’s Name: Dhara Wagh
 Lecture Instructor’s Name: Ardy RD
-Purpose: 
+Purpose: prints out the inputted string followed by the count of the char 
 credits: 
 
 This page helped me with the while loop declaration because NULL wasnt working

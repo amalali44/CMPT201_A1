@@ -32,7 +32,7 @@ squeeze: squeeze.c
 	$(CC) $(CFLAGS) squeeze.c -o squeeze
 
 # Test: Tests all programs
-Testing: testsqueeze testxTable
+Testing: testsqueeze testcardinalSort testxTable testcountingCovid
 testsqueeze:
 	./squeeze < testsqueezeIn.txt > testsqueezeOut.txt 
 	diff testsqueezeOut.txt correctsqueeze.txt
@@ -41,11 +41,19 @@ testxTable:
 	./xTable < testxTableIn.txt > testxTableOut.txt
 	diff testxTableOut.txt correctxTable.txt 
 
+testcountingCovid:
+	./countingCovid < testcountingCovidIn.txt > testcountingCovidOut.txt
+	diff testcountingCovidOut.txt correctcountingCovid.txt
+
+testcardinalSort:
+	./cardinalSort < testcardinalSortIn.txt > testcardinalSortOut.txt
+	diff testcardinalSortOut.txt correctcardinalSort.txt
+
 #Clean: Cleans out all the executable files 
 clean:
 	 rm *.o 
 
 #Packagae: Condenses all the specified files into a tarball
 package:
-	tar -czvf $(PACKAGE_NAME) squeeze.c xTable.c countingCovid.c cardinalSort.c
+	tar -czvf $(PACKAGE_NAME) squeeze.c xTable.c countingCovid.c cardinalSort.c /testing_directory
 
