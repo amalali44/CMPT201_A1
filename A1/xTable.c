@@ -4,20 +4,13 @@ Assignment #1
 Lab Section: X06L
 Lab Instructor’s Name: Dhara wagh
 Lecture Instructor’s Name: Ardy RD
+Purpose: Calculates and prints the result of a math equation in tabular form for integeras countng from 5 to 100
 */
 
 #include <stdio.h>
 #include <math.h>
 
 int main() {
-    // int x, y;
-
-    // printf("Pick a num: ");
-    // scanf("%d", &x);
-
-    // printf("Pick another num: ");
-    // scanf("%d", &y);
-
     // Print column headers
     printf(" + ");
     int col = 5;
