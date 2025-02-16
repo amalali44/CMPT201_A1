@@ -50,6 +50,7 @@ int main() {
             current_date[j++] = line[i++];
         }
 
+
         int exists = 1;
         int index_k = 0;
 
@@ -74,7 +75,7 @@ int main() {
     }
 
     if (counter > 0) {
-        printf("%s %d\n", date_storage, counter);     // Print all the dates and their count
+        printf("%s %d\n", date_storage, counter); // Print all the dates and their count
 
     }
 

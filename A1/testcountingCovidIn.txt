@@ -1,1 +1,1 @@
-covidData_100.csv
+covidData_1000.csv
