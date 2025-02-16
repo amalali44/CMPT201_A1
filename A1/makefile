@@ -1,7 +1,9 @@
 # ID BOX:
-# Name: Amal
-# Lab section: X06L
-# Due date: January 26
+# Name: Amal Ali
+# Assignment #1
+# Lab Section: X06L
+# Lab Instructor’s Name: Dhara wagh
+# Lecture Instructor’s Name: Ardy RD
 # File purpose: To compile several C source codes with one command
 
 
@@ -12,7 +14,7 @@ PACKAGE_NAME = cmpt201_A1_AA.tar.gz
 LDFLAGS = -lm
 
 all: cardinalSort countingCovid xTable squeeze
-	$(CC) $(CFLAGS) cardinalSort.c countingCovid.c xTable.c squeeze.c -o cardinalSort countingCovid xTable squeeze
+	$(CC) $(CFLAGS) cardinalSort.c countingCovid.c xTable.c squeeze.c -o cardinalSort countingCovid xTable squeeze $(LDFLAGS)
 
 #Target 1: cardinalSort.c
 CardinalSort: cardinalSort.c
@@ -25,11 +27,11 @@ countingCovid: countingCovid.c
 #Target 3: xTable.c
 xTable: xTable.c
 	$(CC) $(CFLAGS) xTable.c -o xTable $(LDFLAGS)
-
  
 #Target 4: Squeeze.c
 squeeze: squeeze.c
 	$(CC) $(CFLAGS) squeeze.c -o squeeze
+
 
 # Test: Tests all programs
 Testing: testsqueeze testcardinalSort testxTable testcountingCovid
