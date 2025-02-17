@@ -20,7 +20,7 @@ https://www.geeindex_ksforgeeindex_ks.org/logical-operators-in-c/
 
 #include <stdio.h>
 
-#define MAX_LINE_LENGTH 256 
+#define MAX_LINE_LENGTH 300 
 #define LEN_OF_DATE 11 // yyyy/mm/dd + 1 extra for null
 
 int main() {

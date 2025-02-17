@@ -34,7 +34,7 @@ squeeze: squeeze.c
 
 
 # Test: Tests all programs
-Testing: testsqueeze testcardinalSort testxTable testcountingCovid
+Testing: testsqueeze testxTable testcountingCovid testcardinalSort
 testsqueeze:
 	./squeeze < testsqueezeIn.txt > testsqueezeOut.txt 
 	diff testsqueezeOut.txt correctsqueeze.txt
@@ -57,5 +57,5 @@ clean:
 
 #Packagae: Condenses all the specified files into a tarball
 package:
-	tar -czvf $(PACKAGE_NAME) squeeze.c xTable.c countingCovid.c cardinalSort.c /testing_directory
+	tar -czvf $(PACKAGE_NAME) squeeze.c xTable.c countingCovid.c cardinalSort.c README.md makefile Testing_directory Q2_datasets
 
