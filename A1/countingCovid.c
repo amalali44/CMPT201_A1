@@ -20,21 +20,19 @@ https://www.geeindex_ksforgeeindex_ks.org/logical-operators-in-c/
 
 #include <stdio.h>
 
-#define MAX_LINE_LENGTH 300 
-#define LEN_OF_DATE 11 // yyyy/mm/dd + 1 extra for null
+#define max_linelength 300 
+#define date_len 11 // yyyy/mm/dd + 1 extra for '\0'
 
 int main() {
-    char line[MAX_LINE_LENGTH]; // buffer
-    char date_storage[LEN_OF_DATE] = ""; //  stores the current date being counted
+    char line[max_linelength]; // buffer
+    char date_storage[date_len] = ""; //  stores the current date being counted
     int counter = 0; 
 
     fgets(line, sizeof(line), stdin);  // Skip the first line which is the header line
 
-
     while (fgets(line, sizeof(line), stdin)) {   // Processes each line 
         int i = 0, j = 0;
 
-        
         while (line[i] != ',' && line[i] != '\0') // skip first comma separatedcoloumn
             i++; 
         i++;
@@ -42,30 +40,29 @@ int main() {
             i++;
         i++; 
         
-
-        char current_date[MAX_LINE_LENGTH] = ""; // stores the extracted current dates
+        char current_date[max_linelength] = ""; // stores the extracted current dates
         j = 0;
 
-        while (line[i] != ','  && j < MAX_LINE_LENGTH - 1) {
+        while (line[i] != ','  && j < max_linelength - 1) {
             current_date[j++] = line[i++];
         }
-
 
         int exists = 1;
         int index_k = 0;
 
-        while (exists && (current_date[index_k] != '\0' || date_storage[index_k] != '\0')) { // compares each element date stoarage with current_date  
-            if (current_date[index_k] != date_storage[index_k]) { // if the current date is not in date storage (dates are not the same)
+        while (index_k < date_len &&(current_date[index_k] != '\0' || date_storage[index_k] != '\0')) { // loops through the elements in currrent_date and date_stroage strings 
+            if (current_date[index_k] != date_storage[index_k]) { // compares each element date stoarage with current_date, if the current date is not in date storage (dates are different)
                 exists = 0; } // Set the flag to 0 
-            index_k++; 
+            index_k++; // go to next index value
         }
 
         if (!exists) { // If the current_date is different
             if (counter > 0) {
                 printf("%s %d\n", date_storage, counter); //print the date and it's counter 
             }
+
             // Copy the new current_date into date_storage
-            for (int index_k = 0; current_date[index_k] != '\0'; index_k++) {
+            for (int index_k = 0; index_k < date_len ; index_k++) {
                 date_storage[index_k] = current_date[index_k];
             }
             counter = 1;

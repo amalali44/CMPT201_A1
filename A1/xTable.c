@@ -12,7 +12,7 @@ Purpose: Calculates and prints the result of a math equation in tabular form for
 
 int main() {
     // Print column headers
-    printf("  +");
+    printf(" +");
     int col = 5;
     while (col <= 100) {
         printf("\t%d", col);
