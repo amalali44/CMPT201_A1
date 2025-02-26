@@ -13,6 +13,8 @@ CFLAGS= -Wall -std=c99
 PACKAGE_NAME = cmpt201_A1_AA.tar.gz
 LDFLAGS = -lm
 
+# Target 1:
+
 #Clean: Cleans out all the executable files 
 clean:
 	 rm *.o 
