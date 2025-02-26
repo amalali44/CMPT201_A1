@@ -7,9 +7,9 @@
  * It is a common convention to append "_impl" to a private implementation of
  * some public interface, so we do so here.
  *
- * Author: <TODO: your name here>
- * Lab instructor: <TODO: Your lab instructor's name here>
- * Lecture instructor: <TODO: Your lecture instructor's name here>
+ * Author: Amal Ali
+ * Lab instructor: Dhara wagh
+ * Lecture instructor: Ardy RD
  */
 
 #ifndef _HT_IMPL_H_
